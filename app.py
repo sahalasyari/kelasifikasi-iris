@@ -1,3 +1,9 @@
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+app_code = """
 import streamlit as st
 import pandas as pd
 from sklearn.datasets import load_iris
@@ -54,3 +60,8 @@ st.write(iris_species[prediction[0]])
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
+"""
+
+# Tulis kode aplikasi ke file `app.py`, when you upload to github, erase this part
+with open("app.py", "w") as file:
+    file.write(app_code)
